@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>client</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.7.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.7.6/firebase-database.js"></script>
+
+    <link href="client_style.css" rel="stylesheet" />
+
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCiJlRq7ejuUaIC0HVOvPG9IDz-1FbHNnI",
+        authDomain: "trivia-box.firebaseapp.com",
+        databaseURL: "https://trivia-box.firebaseio.com",
+        projectId: "trivia-box",
+        storageBucket: "trivia-box.appspot.com",
+        messagingSenderId: "847754234606"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="client.js"></script>
+  </head>
+  <body>
+    <h1>Trivia Box</h1>
+    <button id="start">Start Game</button>
+    <div id="questionBtns" style="display:none">
+      <h3>Question #<span id="questionNum"></span></h3>
+      <button class="answer" value="A">A</button>
+      <button class="answer" value="B">B</button>
+      <button class="answer" value="C">C</button>
+      <button class="answer" value="D">D</button>
+      <br />
+      <br />
+      <button id="repeat">Repeat</button>
+      <button id="end">Quit</button>
+    </div>
+    <div id="results" style="display:none">
+      <h3 id="result_percent"></h3>
+      <p id="result_num"></p>
+    </div>
+
+    <footer>
+      <button id="reboot">Restart Server</button>
+      <br><br><br>
+      Powered by Google Firebase <br>and ResponsiveVoice
+    </footer>
+
+  </body>
+</html>

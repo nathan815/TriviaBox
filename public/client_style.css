@@ -1,0 +1,39 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background: #f5f5f5;
+  text-align: center;
+  font-size: 13px;
+}
+
+
+button {
+  background: #0DA4D6;
+  border: none;
+  color: white;
+  outline: none;
+  padding: 15px 20px;
+  font-size: 12px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #ccc;
+}
+
+button.answer, button#start {
+  font-size: 15px;
+}
+
+button:disabled {
+  opacity: 0.7;
+}
+
+footer {
+  margin-top: 50px;
+  color: #aaa;
+}
+#reboot {
+  background: white;
+  color: #0DA4D6;
+  border: 1px solid #ccc;
+  padding: 7px 10px;
+  opacity: 0.8;
+  box-shadow: 0 0 3px #ddd;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Trivia Box</title>
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.7.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.7.6/firebase-database.js"></script>
+
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCiJlRq7ejuUaIC0HVOvPG9IDz-1FbHNnI",
+        authDomain: "trivia-box.firebaseapp.com",
+        databaseURL: "https://trivia-box.firebaseio.com",
+        projectId: "trivia-box",
+        storageBucket: "trivia-box.appspot.com",
+        messagingSenderId: "847754234606"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="./server.js"></script>
+    <script>
+    if(typeof TriviaBoxServer == 'undefined')
+      setTimeout(function() {
+        location.reload();
+      },2000);
+    </script>
+    <style>
+    body {
+      font-family: sans-serif;
+      background: black;
+      color: #ccc;
+    }
+    #speaks {
+      font-family: Courier, monospace;
+    }
+    #speaks div {
+      margin-bottom: 10px;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>Trivia Box Server</h1>
+    <div id="speaks"></div>
+  </body>
+</html>
